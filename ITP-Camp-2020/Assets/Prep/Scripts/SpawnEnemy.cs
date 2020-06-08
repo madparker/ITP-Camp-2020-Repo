@@ -23,8 +23,10 @@ public class SpawnEnemy : MonoBehaviour {
 	void MakeEnemy(){
         GameObject newEnemy = Instantiate<GameObject>(enemyPrefab); //create a new enemy GameObject from prefab
 
-		newEnemy.transform.position = new Vector2( //set the position of the new enemy
-			Random.Range(-7, 7), //to a random x between -7 and 7
-			startY); //and a y of startY
+        float randomX = Random.Range(-7, 7); //get an X between between -7 and 7
+
+        newEnemy.transform.position = new Vector2( //set the position of the new enemy
+            randomX, //randomX
+            startY); //and a y of startY
 	}
 }
